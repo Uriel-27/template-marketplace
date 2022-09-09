@@ -4,9 +4,24 @@
 
 .texto-card {
     font-family: 'Poppins', sans-serif !important;
-
+    color: #666666;
+    font-size: 15px;
+    margin-left: 10px;
 }
 
 .titulo-card {
     font-family: 'Poppins', sans-serif !important;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.link-cards {
+    text-decoration: none;
+    color: black;
+}
+
+.link-cards:hover {
+    background-color: #717fe0;
+    filter: drop-shadow(0 0 0.5rem black);
+    border-radius: 10px;
 }
