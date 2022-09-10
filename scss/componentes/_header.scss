@@ -7,5 +7,23 @@
     font-family: 'Poppins', sans-serif !important;
     margin: 10px 5px;
     font-size: 14px;
+
+
 }
 
+.light {
+
+    background-color: #fff;
+    Transition: 0.8s all ease-in-out;
+
+
+
+}
+
+.dark {
+    background-color: rgba(245, 222, 179, 0);
+    Transition: 0.8s all ease-in-out;
+    margin: 0px 0px;
+
+
+}

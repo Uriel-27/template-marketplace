@@ -14,6 +14,17 @@
   font-size: 14px;
 }
 
+.light {
+  background-color: #fff;
+  Transition: 0.8s all ease-in-out;
+}
+
+.dark {
+  background-color: rgba(245, 222, 179, 0);
+  Transition: 0.8s all ease-in-out;
+  margin: 0px 0px;
+}
+
 .cards-productos {
   margin: 100px 0;
 }
@@ -81,6 +92,16 @@
 .titulo-filtro {
   font-family: "Poppins", sans-serif !important;
   font-weight: 700;
+}
+
+.link-tabla {
+  text-decoration: none !important;
+  color: #666666 !important;
+}
+
+.link-tabla:hover {
+  text-decoration: underline !important;
+  color: #717fe0 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
