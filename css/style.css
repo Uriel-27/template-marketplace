@@ -10,11 +10,11 @@
 } */
 .light{
   background-color:#fff; 
-  Transition:0.5s all ease-in-out;
+  Transition:0.8s all ease-in-out;
 }
 .dark{
   background-color: rgba(245, 222, 179, 0); 
-  Transition:0.5s all ease-in-out;
+  Transition:0.8s all ease-in-out;
 }
 .nav-link {
   font-family: "Poppins", sans-serif !important;
