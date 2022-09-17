@@ -340,9 +340,12 @@
   <script>
     /*Animacion Scroll*/
     $(window).scroll(function () {
-      if ($(window).scrollTop() < 1) {
 
+      if ($(window).scrollTop() === 0) {
+        
         $('nav').addClass('dark', $(this).scrollTop());
+
+        
       } else {
         $('nav').removeClass('dark', $(this).scrollTop());
         $('nav').addClass('light', $(this).scrollTop());
