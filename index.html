@@ -17,12 +17,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
   <title>Ecomm - Home</title>
 </head>
 
-<body>
+<body id="body">
 
   <!-- MENÚ NAVBAR -->
   <header>
@@ -45,6 +45,17 @@
                 <path
                   d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
               </svg></a>
+
+
+
+              <!-- LUNA -->
+              <a class="nav-link" onclick="darkMode()"><svg id="luna" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+              </svg></a>
+
+
+
+
           </div>
         </div>
       </div>
@@ -85,6 +96,11 @@
       <span class="visually-hidden">Next</span>
     </button>
 
+  </div>
+
+  <!-- BOTON STICKY -->
+  <div class="icon-bar" id="btn-sticky">
+    <a href="#" class="boton-sticky">^</a>
   </div>
 
   <!-- CARDS -->
@@ -132,13 +148,13 @@
 
 
   <!-- FILTRO -->
-  <section class="container">
+  <section class="container mb-5">
     <h2 class="titulo-filtro">Product overview</h2>
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active nav-filtro" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-          type="button" role="tab" aria-controls="home" aria-selected="true">Todas los productos</button>
+          type="button" role="tab" aria-controls="home" aria-selected="true">Todos los productos</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link nav-filtro" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
@@ -154,21 +170,24 @@
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link nav-filtro" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-          type="button" role="tab" aria-controls="contact" aria-selected="false" onclick="botonFiltro()">Filtro</button>
+          type="button" role="tab" aria-controls="contact" aria-selected="false">Filtro</button>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab"></div>
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-      <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
         <div class="input-group mt-4 mb-3">
-        <input id="inputSearch" onkeyup="funcionSearch()" type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        <span class="input-group-text" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-          </svg></span>
-      </div>
-      <div class="card card-body">
-        <table class="table table-borderless">
+          <input id="inputSearch" onkeyup="funcionSearch()" type="text" class="form-control" placeholder="Search..."
+            aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+              height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg></span>
+        </div>
+        <div class="card card-body">
+          <table class="table table-borderless">
             <thead>
               <tr>
                 <th scope="col">Sort By</th>
@@ -198,7 +217,8 @@
               </tr>
             </tbody>
           </table>
-    </div></div>
+        </div>
+      </div>
     </div>
 
 
@@ -226,7 +246,31 @@
             <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
           </div>
           <div class="card-body">
-            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto 1</a></h5>
+            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto gorra</a></h5>
+            <p class="card-text costo-cards-filtro">$25.64</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <div class="container-img-filtro">
+            <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto zapatilla</a></h5>
+            <p class="card-text costo-cards-filtro">$1000.12</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <div class="container-img-filtro">
+            <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto celular</a></h5>
             <p class="card-text costo-cards-filtro">$16.64</p>
           </div>
         </div>
@@ -238,8 +282,8 @@
             <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
           </div>
           <div class="card-body">
-            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto 2</a></h5>
-            <p class="card-text costo-cards-filtro">$16.64</p>
+            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto teclado</a></h5>
+            <p class="card-text costo-cards-filtro">$160.02</p>
           </div>
         </div>
       </div>
@@ -250,8 +294,8 @@
             <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
           </div>
           <div class="card-body">
-            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto 3</a></h5>
-            <p class="card-text costo-cards-filtro">$16.64</p>
+            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto mouse</a></h5>
+            <p class="card-text costo-cards-filtro">$234.34</p>
           </div>
         </div>
       </div>
@@ -262,8 +306,8 @@
             <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
           </div>
           <div class="card-body">
-            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto 4</a></h5>
-            <p class="card-text costo-cards-filtro">$16.64</p>
+            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto play</a></h5>
+            <p class="card-text costo-cards-filtro">$789.99</p>
           </div>
         </div>
       </div>
@@ -274,8 +318,8 @@
             <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
           </div>
           <div class="card-body">
-            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto 5</a></h5>
-            <p class="card-text costo-cards-filtro">$16.64</p>
+            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto joystick</a></h5>
+            <p class="card-text costo-cards-filtro">$56.87</p>
           </div>
         </div>
       </div>
@@ -286,38 +330,56 @@
             <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
           </div>
           <div class="card-body">
-            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto 6</a></h5>
-            <p class="card-text costo-cards-filtro">$16.64</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <div class="container-img-filtro">
-            <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto 7</a></h5>
-            <p class="card-text costo-cards-filtro">$16.64</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <div class="container-img-filtro">
-            <img src="img/product-09.jpg" class="card-img-top imagen-card-filtro" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto 8</a></h5>
-            <p class="card-text costo-cards-filtro">$16.64</p>
+            <h5 class="card-title"><a class="titulo-cards-filtro" href="">Producto billetera</a></h5>
+            <p class="card-text costo-cards-filtro">$28.65</p>
           </div>
         </div>
       </div>
 
     </div>
   </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-negro">
+    <div class="container mt-5 mb-3">
+      <div class="row">
+        <div class="col">
+          <h4 class="titulo-footer">CATEGORIES</h4>
+          <ul>
+            <li><a href="" class="links-footer">Mujeres</a></li>
+            <li><a href="" class="links-footer">Hombres</a></li>
+            <li><a href="" class="links-footer">Zapatillas</a></li>
+            <li><a href="" class="links-footer">Relojes</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4 class="titulo-footer">HELP</h4>
+          <ul>
+            <li><a href="" class="links-footer">Track Order</a></li>
+            <li><a href="" class="links-footer">Returns</a></li>
+            <li><a href="" class="links-footer">Shipping</a></li>
+            <li><a href="" class="links-footer">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4 class="titulo-footer">GET IN TOUCH</h4>
+          <ul>
+            <li class="info-footer">Any questions? Let us know in store.</li>
+            <li class="info-footer">At 8th floor, 379 Hudson St, New York, NY 10018</li>
+            <li class="info-footer">Or call us on (+1) 96 716 6879</li>
+            <li>facebook - Pinterest - Twitter</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4 class="titulo-footer">NEWSLETTER</h4>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -336,10 +398,15 @@
   <script>
     /*Animacion Scroll*/
     $(window).scroll(function () {
-      if ($(window).scrollTop() < 1) {
-
+      let btn = document.getElementById("btn-sticky")
+      if ($(window).scrollTop() === 0) {
+        console.log(document.getElementById("btn-sticky"))
+        btn.style.display = "none";
         $('nav').addClass('dark', $(this).scrollTop());
+
+
       } else {
+        btn.style.display = "";
         $('nav').removeClass('dark', $(this).scrollTop());
         $('nav').addClass('light', $(this).scrollTop());
       }
@@ -348,32 +415,45 @@
 
     /*Funcion buscar de input*/
     function funcionSearch() {
-      let input, filter, ul, li, a, i, txtValue;
+      let input, filter, ul, li, a, i, txtValue, txtPrecio;
       input = document.getElementById("inputSearch")
       filter = input.value.toUpperCase();
+      let cardFiltro = document.querySelectorAll("#cards .col");
+      //console.log(cardFiltro)
+      let cardTitulo = document.querySelectorAll("#cards .titulo-cards-filtro");
+      let cardPrecio = document.querySelectorAll("#cards .costo-cards-filtro");
 
-      console.log(filter)
+      for (let index = 0; index < cardTitulo.length; index++) {
+        for (let index = 0; index < cardPrecio.length; index++) {
+          txtPrecio = cardPrecio[index].innerHTML
+          txtValue = cardTitulo[index].innerHTML
+          //console.log(filter)
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            cardFiltro[index].style.display = "";
+          } else if (txtPrecio.toUpperCase().indexOf(filter) > -1) {
+            cardFiltro[index].style.display = "";
 
-    }
-
-    /*Funcion Boton Filtro*/
-    function botonFiltro() {
-      let cards1 = document.querySelectorAll("#cards .titulo-cards-filtro")[0];
-      cards2 = document.querySelectorAll("#cards .titulo-cards-filtro")[1];
-      cards3 = document.querySelectorAll("#cards .titulo-cards-filtro")[2];
-      cards4 = document.querySelectorAll("#cards .titulo-cards-filtro")[3];
-      cards5 = document.querySelectorAll("#cards .titulo-cards-filtro")[4];
-      cards6 = document.querySelectorAll("#cards .titulo-cards-filtro")[5];
-      cards7 = document.querySelectorAll("#cards .titulo-cards-filtro")[6];
-      cards8 = document.querySelectorAll("#cards .titulo-cards-filtro")[7];
-
-
-
+          } else {
+            cardFiltro[index].style.display = "none";
+          }
+        }
+      }
       let seccion = document.getElementById("collapseExample1")
+    }
 
-      
+    function darkMode(){
+      let body = document.getElementById("body");
+      body.classList.toggle("dark-mode");
 
     }
+
+    $('#btn-sticky').on('click', function () {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 500);
+    })
+
+    
   </script>
   <!-- SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

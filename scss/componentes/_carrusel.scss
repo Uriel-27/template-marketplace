@@ -33,3 +33,32 @@
     background-color: black !important;
     color: whitesmoke !important;
 }
+
+.icon-bar {
+    position: fixed;
+    left: 95%;
+    top: 98%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    transition: all 0.3s ease;
+    color: white;
+    text-decoration: none !important;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    color: white;
+    background-color: #717fe0;
+}
+
+.boton-sticky {
+    background: #949edf;
+    color: white;
+}

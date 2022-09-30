@@ -4,6 +4,40 @@
   box-sizing: border-box;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.footer-negro {
+  background-color: #222;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.titulo-footer {
+  color: white;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.links-footer {
+  color: #b2b2b2;
+  text-decoration: none !important;
+}
+
+.links-footer:hover {
+  color: #717fe0;
+}
+
+.info-footer {
+  color: white;
+}
+
+ul {
+  list-style-type: none !important;
+  padding: 0 !important;
+}
+
 /* .banner-negro {
     background-color: #222;
     height: 40px;
@@ -117,6 +151,35 @@
 .boton-carrusel:hover {
   background-color: black !important;
   color: whitesmoke !important;
+}
+
+.icon-bar {
+  position: fixed;
+  left: 95%;
+  top: 98%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px 15px 10px 15px;
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none !important;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  color: white;
+  background-color: #717fe0;
+}
+
+.boton-sticky {
+  background: #949edf;
+  color: white;
 }
 
 .titulo-filtro {
